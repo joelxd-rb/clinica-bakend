@@ -57,7 +57,7 @@ router.get('/', verificar, async (req, res) => {
     const { fecha } = req.query;
     try {
         let baseQuery = `
-            SELECT c.id, c.fecha_hora, c.motivo, c.estado, c.solo_doctor, 
+            SELECT c.id, c.id_doctor, c.id_paciente, c.fecha_hora, c.motivo, c.estado, c.solo_doctor, 
                    d.nombre AS doctor_nombre, d.apellidos AS doctor_apellidos,
                    p.nombre AS paciente_nombre, p.apellidos AS paciente_apellidos
             FROM citas c
